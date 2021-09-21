@@ -16,3 +16,4 @@ For this I choose (me and Mazda) calculator. Inspired by ubuntu's advanced mode 
 - [ ] Root square, cube and so on
 - [ ] Power square, cube and so on
 - [ ] Graphic creation
+- [ ] Install the app like youtube, maps and others

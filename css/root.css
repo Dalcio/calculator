@@ -1,0 +1,25 @@
+:root {
+  --background-color: #4169e1;
+  /* --background-color: #ffdd02; */
+  --results-bg: #313131;
+  --operation-bg: #343434;
+  --container-bg: #3e3e3e;
+  --dark: #2c2c2c;
+  --keyboard: #484848;
+  --text: #f1e7df;
+  /**/
+  --border-r-md: 8px;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+input {
+  border: none;
+}
+
+input:focus {
+  outline: none;
+}
