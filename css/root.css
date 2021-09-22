@@ -7,8 +7,20 @@
   --dark: #2c2c2c;
   --keyboard: #484848;
   --text: #f1e7df;
+  --drop-bg: #3b3b3b;
+  --hover: #5b5b5b;
+  --active-drop-btn: #272727;
+
   /**/
+  --box-shadow: 0px 0px 2px var(--dark);
+  /**/
+  --border-r-sm: 4px;
   --border-r-md: 8px;
+  /* spacing */
+  --sm-em: 0.5em;
+  --sm-rem: 0.5rem;
+  --md-em: 1em;
+  --md-rem: 1em;
 }
 
 * {
@@ -23,11 +35,17 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-input {
+input,
+button {
+  font-size: 0.9em;
+  font-weight: bold;
   border: none;
+  color: var(--text);
+  border-radius: var(--border-r-sm);
 }
 
-input:focus {
+input:focus,
+button:focus {
   outline: none;
 }
 

@@ -1,5 +1,6 @@
 .container {
   display: grid;
+  overflow: hidden;
   grid-template-rows: 47px minmax(118px, auto) 62px minmax(168px, auto);
   height: 100%;
   background-color: var(--container-bg);
@@ -31,6 +32,13 @@ main.keyboard {
 div.results,
 input.operation {
   font-size: 1.5em;
+}
+
+header.header,
+div.results,
+input.operation,
+main.keyboard {
+  padding: var(--sm-em) var(--md-em);
 }
 
 @media (min-width: 390px) {

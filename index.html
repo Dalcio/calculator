@@ -11,7 +11,17 @@
   </head>
   <body>
     <div class="basic container">
-      <header role="banner" class="header"></header>
+      <header role="banner" class="header">
+        <button class="clear">Clear</button>
+        <div class="dropdown-select">
+          <button class="drop-btn" active="false" >Basic Mode</button>
+          <ul class="options">
+            <li value="basic" selected>Basic Mode</li>
+            <li value="financial">Financial Mode</li>
+            <li value="programming">Programming Mode</li>
+          </ul>
+        </div>
+      </header>
       <div class="results"></div>
       <input type="text" name="operation" id="operation" class="operation" />
       <main class="keyboard"></main>
