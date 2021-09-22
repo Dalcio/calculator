@@ -16,10 +16,25 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: var(--background-color);
+  height: 100vh;
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 input {
   border: none;
 }
 
 input:focus {
   outline: none;
+}
+
+@media (min-width: 390px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
