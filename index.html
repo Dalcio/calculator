@@ -8,18 +8,32 @@
     <link rel="stylesheet" href="./css/root.css" />
     <link rel="stylesheet" href="./css/layout.css" />
     <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/keyboard.css" />
+    <link rel="stylesheet" href="./css/basic-keyboard.css" />
   </head>
   <body>
     <div class="basic container">
       <header role="banner" class="header">
         <button class="clear">Clear</button>
         <div class="dropdown-select">
-          <button class="drop-btn" id="drop-btn" active="false" value="basic">
-            Basic Mode
-          </button>
+          <button
+            class="drop-btn"
+            id="drop-btn"
+            active="false"
+            value="basic"
+            aria-label="selected mode"
+          ></button>
           <ul class="options drop-items" id="drop-items" role="list">
-            <li class="option" role="listitem" value="basic" selected="true">
+            <li class="option" role="listitem" value="basic" selected="false">
               Basic Mode
+            </li>
+            <li
+              class="option"
+              role="listitem"
+              value="advanced"
+              selected="false"
+            >
+              Advanced Mode
             </li>
             <li
               class="option"
@@ -42,8 +56,10 @@
       </header>
       <div class="results"></div>
       <input type="text" name="operation" id="operation" class="operation" />
-      <main class="keyboard"></main>
+      <main class="keyboard basic-keyboard"></main>
     </div>
     <script src="./js/drop-down.js"></script>
+    <script src="./js/start.js"></script>
+    <script src="./js/build-basic-keyboard.js"></script>
   </body>
 </html>

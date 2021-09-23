@@ -5,11 +5,8 @@ header[role="banner"] {
 }
 
 button.clear {
-  cursor: pointer;
-  border-radius: var(--border-r-sm);
   background-color: rgb(196, 5, 5);
   height: 100%;
-  transition: background-color 0.3s ease-in-out;
 }
 
 button.clear:hover {
@@ -68,7 +65,7 @@ button.clear:hover {
 }
 
 .dropdown-select > ul.options > li {
-  transition: background-color 0.1s ease-in-out;
+  transition: var(--bg-color-transition);
   padding: 3px 8px;
   cursor: pointer;
   position: relative;

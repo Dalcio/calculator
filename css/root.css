@@ -21,6 +21,8 @@
   --sm-rem: 0.5rem;
   --md-em: 1em;
   --md-rem: 1em;
+  /* animations */
+  --bg-color-transition: background-color 0.1s ease-in-out;
 }
 
 * {
@@ -33,6 +35,12 @@ body {
   height: 100vh;
   color: var(--text);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+  cursor: pointer;
+  border-radius: var(--border-r-sm);
+  transition: var(--bg-color-transition);
 }
 
 input,

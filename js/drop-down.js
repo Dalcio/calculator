@@ -25,6 +25,10 @@ document.addEventListener("click", ({ target }) => {
       drop_down_btn.setAttribute("value", value);
       target.setAttribute("selected", "true");
 
+      // storing on local storage
+      window.localStorage["current-calculator-mode"] = value;
+
+      // closing the dropdown
       drop_down_btn.setAttribute("active", "false");
     } else if (!target.hasAttribute("active") && target.id !== "drop-btn") {
       drop_down_btn.setAttribute("active", "false");
