@@ -37,6 +37,10 @@ button.clear:hover {
   background-color: var(--dark);
 }
 
+.dropdown-select > .drop-btn[active="true"] + ul.options {
+  display: block;
+}
+
 .dropdown-select > ul.options {
   display: none;
   top: 47px;
@@ -65,13 +69,44 @@ button.clear:hover {
 
 .dropdown-select > ul.options > li {
   transition: background-color 0.1s ease-in-out;
-  padding: 2px 8px;
+  padding: 3px 8px;
   cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .dropdown-select > ul.options > li:hover {
   background-color: var(--hover);
   border-radius: var(--border-r-sm);
+}
+
+.dropdown-select > .drop-btn[active="true"] + ul.options > li:after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.dropdown-select
+  > .drop-btn[active="true"]
+  + ul.options
+  > li[selected="true"]:after {
+  background-color: #fff;
+  border: 5px solid indigo;
+}
+
+.dropdown-select
+  > .drop-btn[active="true"]
+  + ul.options
+  > li[selected="false"]:after {
+  background-color: var(--dark);
+  border: 5px solid var(--dark);
+}
+
+.dropdown-select > ul.options > li:not(:last-of-type) {
+  margin-bottom: 3px;
 }
 
 @keyframes dropdown {

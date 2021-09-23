@@ -14,11 +14,29 @@
       <header role="banner" class="header">
         <button class="clear">Clear</button>
         <div class="dropdown-select">
-          <button class="drop-btn" active="false" >Basic Mode</button>
-          <ul class="options">
-            <li value="basic" selected>Basic Mode</li>
-            <li value="financial">Financial Mode</li>
-            <li value="programming">Programming Mode</li>
+          <button class="drop-btn" id="drop-btn" active="false" value="basic">
+            Basic Mode
+          </button>
+          <ul class="options drop-items" id="drop-items" role="list">
+            <li class="option" role="listitem" value="basic" selected="true">
+              Basic Mode
+            </li>
+            <li
+              class="option"
+              role="listitem"
+              value="financial"
+              selected="false"
+            >
+              Financial Mode
+            </li>
+            <li
+              class="option"
+              role="listitem"
+              value="programming"
+              selected="false"
+            >
+              Programming Mode
+            </li>
           </ul>
         </div>
       </header>
@@ -26,5 +44,6 @@
       <input type="text" name="operation" id="operation" class="operation" />
       <main class="keyboard"></main>
     </div>
+    <script src="./js/drop-down.js"></script>
   </body>
 </html>
