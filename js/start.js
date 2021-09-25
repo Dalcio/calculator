@@ -1,6 +1,5 @@
 window.addEventListener("load", () => {
-  const keyboard = document.querySelector("main.keyboard");
-  // const
+  const main_keyboard = document.querySelector("main.keyboard");
   const calculator_mode = window.localStorage.getItem(
     "current-calculator-mode"
   );
@@ -9,13 +8,16 @@ window.addEventListener("load", () => {
 
   if (current_calculator_mode === "basic") {
     activeCurrentMode("basic", "Basic Mode");
-    basicKeyboardMode(keyboard);
+    basicKeyboardMode(main_keyboard);
   } else if (current_calculator_mode === "advanced") {
     activeCurrentMode("advanced", "Advanced Mode");
+    advancedKeyboardMode(main_keyboard);
   } else if (current_calculator_mode === "financial") {
     activeCurrentMode("financial", "Financial Mode");
+    financialKeyboardMode(main_keyboard);
   } else if (current_calculator_mode === "programming") {
     activeCurrentMode("programming", "Programming Mode");
+    programmingKeyboardMode(main_keyboard);
   }
 });
 
@@ -27,17 +29,3 @@ function activeCurrentMode(value, text_content) {
   drop_down_btn.textContent = text_content;
   drop_down_btn.setAttribute("value", value);
 }
-
-function basicKeyboardMode(keyboard) {
-  const basic_keyboard = buildBasicKeyboard();
-  keyboard.classList.remove(["", ""]);
-  keyboard.classList.add("basic-keyboard");
-
-  keyboard.replaceWith(basic_keyboard);
-}
-
-function financialKeyboardMode(keyboard) {}
-
-function programmingKeyboardMode(keyboard) {}
-
-function advancedKeyboardMod(keyboard) {}

@@ -17,3 +17,4 @@ For this I choose (me and Mazda) calculator. Inspired by ubuntu's advanced mode 
 - [ ] Power square, cube and so on
 - [ ] Graphic creation
 - [ ] Install the app like youtube, maps and others
+- [ ] Make the main ui draggled

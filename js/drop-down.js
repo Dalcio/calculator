@@ -6,6 +6,7 @@ drop_down_btn.addEventListener("click", function ({ target }) {
 });
 
 document.addEventListener("click", ({ target }) => {
+  const main_keyboard = document.querySelector("main.keyboard");
   if (drop_down_btn.getAttribute("active") === "true") {
     if (
       target.hasAttribute("selected") &&
@@ -27,6 +28,17 @@ document.addEventListener("click", ({ target }) => {
 
       // storing on local storage
       window.localStorage["current-calculator-mode"] = value;
+
+      // setting the current keyboard mode
+      if (value === "basic") {
+        basicKeyboardMode(main_keyboard);
+      } else if (value === "advanced") {
+        advancedKeyboardMode(main_keyboard);
+      } else if (value === "financial") {
+        financialKeyboardMode(main_keyboard);
+      } else if (value === "programming") {
+        programmingKeyboardMode(main_keyboard);
+      }
 
       // closing the dropdown
       drop_down_btn.setAttribute("active", "false");

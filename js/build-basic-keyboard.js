@@ -1,32 +1,7 @@
 /**
- * Creates an instance of the element for the specified tag.
- * @param {*} content - The content is a string or an object containing an innerHTML content te of an element.
- * @param {*} classes - The class or classes of an element. String or array of string
- * @param {*} listener - Sets the callback that will be invoked when the button will be clicked.
- * @returns the element
+ * returns an html element containing the basic keyboard keys.
+ * left_angle_bracket, right_angle_bracket, square, square_root, add, multiply, subtract, division, percentage, numbers, clear_display, undo, dot and equal
  */
-function createElementKey(content, classes, listener) {
-  const element = document.createElement("button");
-
-  element.innerHTML = content;
-
-  element.classList.add("key");
-
-  if (Array.isArray(classes)) {
-    classes.map((_class) => {
-      element.classList.add(_class);
-    });
-  } else if (typeof classes === "string") {
-    element.classList.add(classes);
-  }
-
-  if (listener) {
-    element.addEventListener("click", listener);
-  }
-
-  return element;
-}
-
 function buildBasicKeyboard() {
   /* ==== brackets ==== */
   const left_angle_bracket = createElementKey(
@@ -99,7 +74,7 @@ function buildBasicKeyboard() {
   basic_keyboard.appendChild(dot);
   basic_keyboard.appendChild(equal);
 
-  /* end keyboard */
+  /* appending elements on keyboard  */
 
   return basic_keyboard;
 }
