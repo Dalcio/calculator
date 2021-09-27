@@ -27,24 +27,42 @@ function createElementKey(content, classes, listener) {
   return element;
 }
 
+/**
+ * replaces the current keyboard with basic keyboard
+ * @param {*} main_keyboard the node element where the basic keyboard will be appended
+ */
 function basicKeyboardMode(main_keyboard) {
   const basic_keyboard = buildBasicKeyboard();
-  // main_keyboard.classList.remove(["", ""]);
-  // main_keyboard.classList.add("basic-keyboard");
 
-  main_keyboard.replaceWith(basic_keyboard);
-  main_keyboard.innerHTML = "";
   main_keyboard.replaceWith(basic_keyboard);
 }
 
+/**
+ * replaces the current keyboard with advanced keyboard
+ * @param {*} main_keyboard the node element where the advanced keyboard will be appended
+ */
 function advancedKeyboardMode(main_keyboard) {
   const advanced_keyboard = buildAdvancedKeyboard();
-  // main_keyboard.classList.remove(["", ""]);
-  // main_keyboard.classList.add("advanced-keyboard");
 
   main_keyboard.replaceWith(advanced_keyboard);
 }
 
-function financialKeyboardMode(main_keyboard) {}
+/**
+ * replaces the current keyboard with financial keyboard
+ * @param {*} main_keyboard the node element where the financial keyboard will be appended
+ */
+function financialKeyboardMode(main_keyboard) {
+  const financial_keyboard = buildFinancialKeyboard();
 
-function programmingKeyboardMode(main_keyboard) {}
+  main_keyboard.replaceWith(financial_keyboard);
+}
+
+/**
+ * replaces the current keyboard with programming keyboard
+ * @param {*} main_keyboard the node element where the programming keyboard will be appended
+ */
+function programmingKeyboardMode(main_keyboard) {
+  const programming_keyboard = buildProgrammingKeyboard();
+
+  main_keyboard.replaceWith(programming_keyboard);
+}

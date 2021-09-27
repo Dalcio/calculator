@@ -1,0 +1,52 @@
+main.financial-keyboard {
+  display: grid;
+  gap: 3px;
+  grid-template-columns: repeat(10, minmax(46px, 1fr));
+  grid-template-rows: repeat(5, 46px);
+  grid-template-areas:
+    "conversions conversions conversions conversions conversions conversions conversions conversions conversions conversions" /* row nº 1 */
+    "number-7 number-8 number-9 division undo clear-display exponent compounding-term double-declining-depreciation future-value" /* row nº 2 */
+    "number-4 number-5 number-6 multiply left-angle-bracket right-angle-bracket square-root gross-profit-margin periodic-payment present-value" /* row nº 3 */
+    "number-1 number-2 number-3 subtract memory memory logarithm periodic-intersect-rate straight-line-depreciation sum-of-the-years-digits-depreciation" /* row nº 4 */
+    "number-0 dot percentage add equal equal equal financial-term financial-term sum-of-the-years-digits-depreciation" /* row nº 5 */;
+}
+
+.compounding-term {
+  grid-area: compounding-term;
+}
+
+.gross-profit-margin {
+  grid-area: gross-profit-margin;
+}
+
+.periodic-intersect-rate {
+  grid-area: periodic-intersect-rate;
+}
+
+.double-declining-depreciation {
+  grid-area: double-declining-depreciation;
+}
+
+.periodic-payment {
+  grid-area: periodic-payment;
+}
+
+.straight-line-depreciation {
+  grid-area: straight-line-depreciation;
+}
+
+.financial-term {
+  grid-area: financial-term;
+}
+
+.future-value {
+  grid-area: future-value;
+}
+
+.present-value {
+  grid-area: present-value;
+}
+
+.sum-of-the-years-digits-depreciation {
+  grid-area: sum-of-the-years-digits-depreciation;
+}

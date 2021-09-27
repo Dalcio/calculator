@@ -55,7 +55,7 @@ function buildAdvancedKeyboard() {
   // ==== factorial ====
   const factorial = createElementKey("x!", "factorial", () => {});
 
-  /* ==== logarithms */
+  /* ==== logarithms ==== */
   const logarithm = createElementKey("log", "logarithm", () => {});
   const natural_logarithm = createElementKey(
     "ln",
@@ -151,6 +151,7 @@ function buildAdvancedKeyboard() {
 function advancedConversions() {
   const conversions = document.createElement("div");
   conversions.classList.add("conversions");
+  conversions.classList.add("advanced-conversions");
 
   return conversions;
 }
