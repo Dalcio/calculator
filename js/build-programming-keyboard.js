@@ -92,7 +92,7 @@ function buildProgrammingKeyboard() {
   const clear_display = createElementKey("C", "clear-display", () => {});
 
   // ==== equal ====
-  const equal = createElementKey("&equals;", "equal", () => {});
+  const equal = createElementKey("&equals;", "equal", handleEqual);
 
   // ==== square root ====
   const square_root = createElementKey("&Sqrt;", "square-root", () => {});

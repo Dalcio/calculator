@@ -1,5 +1,9 @@
 "use strict";
 /* ==== global vars area ==== */
+// {
+//   expression,
+//   result,
+// }
 let results = [];
 /* end global vars area */
 

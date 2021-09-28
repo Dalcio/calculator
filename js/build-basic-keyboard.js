@@ -40,7 +40,7 @@ function buildBasicKeyboard() {
   const clear_display = createElementKey("C", "clear-display", () => {});
   const undo = createElementKey("&cularr;", "undo", () => {});
   const dot = createElementKey(".", "dot", () => {});
-  const equal = createElementKey("&equals;", "equal", () => {});
+  const equal = createElementKey("&equals;", "equal", handleEqual);
   /* end  */
 
   /* appending elements on keyboard */
