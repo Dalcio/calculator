@@ -48,8 +48,8 @@ function handleEqual() {
 function execExpression(expression) {
   const formatted_expression = formatExpression(expression);
   const res = eval(formatted_expression);
-
-  return res;
+  Number()
+  return res.toFixed(4);
 }
 
 /**
