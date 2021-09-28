@@ -18,6 +18,8 @@ function createElementKey(content, classes, listener) {
     });
   } else if (typeof classes === "string") {
     element.classList.add(classes);
+  } else {
+    throw new Error("it is not a valid class")
   }
 
   if (listener) {

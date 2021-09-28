@@ -11,7 +11,7 @@ function buildAdvancedKeyboard() {
 
   /* ==== scripts ==== */
   const subscript = createElementKey("&downarrow;n", "subscript", () => {});
-  const superscript = createElementKey("&downarrow;n", "superscript", () => {});
+  const superscript = createElementKey("&uparrow;n", "superscript", () => {});
   /* end scripts */
 
   // ==== scientific exponent ====
