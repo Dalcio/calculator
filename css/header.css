@@ -36,6 +36,7 @@ button.clear:hover {
 
 .dropdown-select > .drop-btn[active="true"] + ul.options {
   display: block;
+  z-index: 1;
 }
 
 .dropdown-select > ul.options {

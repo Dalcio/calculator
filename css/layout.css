@@ -1,8 +1,9 @@
 .container {
   display: grid;
   overflow: hidden;
-  grid-template-rows: 47px minmax(118px, auto) 62px minmax(168px, auto);
+  grid-template-rows: 47px 98px 62px minmax(168px, auto);
   height: 100%;
+  max-height: 567px;
   background-color: var(--container-bg);
 }
 
@@ -13,6 +14,7 @@ header.header {
 
 div.results {
   grid-row: 2 / 3;
+  max-height: 98px;
   background-color: var(--results-bg);
 }
 
@@ -29,13 +31,12 @@ main.keyboard {
   border-top: 1px solid var(--dark);
 }
 
-div.results,
 input.operation {
   font-size: 1.5em;
+  border-radius: 0;
 }
 
 header.header,
-div.results,
 input.operation,
 main.keyboard {
   padding: var(--sm-em) var(--md-em);
