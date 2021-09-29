@@ -41,6 +41,14 @@ function handleEqual() {
 }
 
 /**
+ * clear the input field
+ */
+function clearDisplay() {
+  const display = document.querySelector("input.operation");
+  display.value = "";
+}
+
+/**
  * exec the expression and return the result of that operation
  * @param {*} expression
  * @returns
@@ -48,7 +56,7 @@ function handleEqual() {
 function execExpression(expression) {
   const formatted_expression = formatExpression(expression);
   const res = eval(formatted_expression);
-  Number()
+  Number();
   return res.toFixed(4);
 }
 

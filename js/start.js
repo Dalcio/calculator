@@ -1,4 +1,4 @@
-window.addEventListener("load", () => {
+document.addEventListener("DOMContentLoaded", () => {
   const main_keyboard = document.querySelector("main.keyboard");
   const calculator_mode = window.localStorage.getItem(
     "current-calculator-mode"

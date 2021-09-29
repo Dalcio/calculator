@@ -89,7 +89,7 @@ function buildProgrammingKeyboard() {
   /* end booleans operations  */
 
   // ==== clear display ====
-  const clear_display = createElementKey("C", "clear-display", () => {});
+  const clear_display = createElementKey("C", "clear-display", clearDisplay);
 
   // ==== equal ====
   const equal = createElementKey("&equals;", "equal", handleEqual);

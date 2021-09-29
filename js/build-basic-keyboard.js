@@ -37,7 +37,7 @@ function buildBasicKeyboard() {
   /* end  */
 
   /* ==== others ==== */
-  const clear_display = createElementKey("C", "clear-display", () => {});
+  const clear_display = createElementKey("C", "clear-display", clearDisplay);
   const undo = createElementKey("&cularr;", "undo", () => {});
   const dot = createElementKey(".", "dot", () => {});
   const equal = createElementKey("&equals;", "equal", handleEqual);
