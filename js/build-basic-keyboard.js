@@ -4,42 +4,34 @@
  */
 function buildBasicKeyboard() {
   /* ==== brackets ==== */
-  const left_angle_bracket = createElementKey(
-    "(",
-    "left-angle-bracket",
-    () => {}
-  );
-  const right_angle_bracket = createElementKey(
-    ")",
-    "right-angle-bracket",
-    () => {}
-  );
+  const left_angle_bracket = createElementKey("(", "left-angle-bracket");
+  const right_angle_bracket = createElementKey(")", "right-angle-bracket");
   /* end brackets */
 
   /* ==== squares ==== */
-  const square = createElementKey("x<sup>2</sup>", "square", () => {});
-  const square_root = createElementKey("&Sqrt;", "square-root", () => {});
+  const square = createElementKey("x<sup>2</sup>", "square");
+  const square_root = createElementKey("&Sqrt;", "square-root");
   /* end  */
 
   /* ==== operations ==== */
-  const add = createElementKey("&plus;", "add", () => {});
-  const multiply = createElementKey("&times;", "multiply", () => {});
-  const subtract = createElementKey("&minus;", "subtract", () => {});
+  const add = createElementKey("&plus;", "add");
+  const multiply = createElementKey("&times;", "multiply");
+  const subtract = createElementKey("&minus;", "subtract");
   const division = createElementKey("&divide;", "division");
-  const percentage = createElementKey("&percnt;", "percentage", () => {});
+  const percentage = createElementKey("&percnt;", "percentage");
   /* end  */
 
   /* ==== numbers ==== */
   const numbers = [];
   "0 1 2 3 4 5 6 7 8 9".split(" ").forEach((number) => {
-    numbers.push(createElementKey(number, `number-${number}`, () => {}));
+    numbers.push(createElementKey(number, `number-${number}`));
   });
   /* end  */
 
   /* ==== others ==== */
   const clear_display = createElementKey("C", "clear-display", clearDisplay);
   const undo = createElementKey("&cularr;", "undo", () => {});
-  const dot = createElementKey(".", "dot", () => {});
+  const dot = createElementKey(".", "dot");
   const equal = createElementKey("&equals;", "equal", handleEqual);
   /* end  */
 

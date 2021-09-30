@@ -1,0 +1,8 @@
+div.operation {
+  display: flex;
+  padding: var(--md-rem) var(--md-rem);
+  font-size: 1.5rem;
+  cursor: text;
+  align-items: center;
+  border-radius: 0;
+}

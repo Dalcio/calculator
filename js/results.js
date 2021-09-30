@@ -1,10 +1,6 @@
 "use strict";
 /* ==== global vars area ==== */
-// {
-//   expression,
-//   result,
-// }
-let results = [];
+let results = []; // { expression,result }
 /* end global vars area */
 
 // clear the results
@@ -22,6 +18,7 @@ clear_results.addEventListener("click", () => {
 // const results_equation = document.querySelector(".results > .equation");
 
 // results_equation.addEventListener("click", () => {
+// when clicked in operation result adds the result. when clicked on operation adds the operation
 //   // put me into input field
 //   alert("put me into input field");
 // });

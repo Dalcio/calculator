@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/keyboard.css" />
     <link rel="stylesheet" href="./css/results.css" />
+    <link rel="stylesheet" href="./css/operation.css" />
     <link rel="stylesheet" href="./css/scroll.css" />
     <link rel="stylesheet" href="./css/basic-keyboard.css" />
     <link rel="stylesheet" href="./css/advanced-keyboard.css" />
@@ -60,7 +61,13 @@
         </div>
       </header>
       <div class="results"></div>
-      <input type="text" name="operation" id="operation" class="operation" />
+      <div
+        type="text"
+        name="operation"
+        id="operation"
+        contenteditable="true"
+        class="operation"
+      ></div>
       <main class="keyboard"></main>
     </div>
     <script src="./js/drop-down.js"></script>
@@ -68,6 +75,8 @@
     <script src="./js/keyboard.js"></script>
     <script src="./js/results.js"></script>
     <script src="./js/operation.js"></script>
+    <script src="./js/handle-keys.js"></script>
+    <script src="./js/execcommand.js"></script>
     <script src="./js/build-basic-keyboard.js"></script>
     <script src="./js/build-advanced-keyboard.js"></script>
     <script src="./js/build-financial-keyboard.js"></script>

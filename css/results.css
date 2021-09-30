@@ -19,7 +19,7 @@
   align-items: center;
 }
 
-.results > .equation > .operation {
+.results > .equation > .operation-result {
   grid-area: operation;
   justify-self: left;
 }
@@ -41,7 +41,7 @@ div.results > .equation:last-of-type {
   border-top: 1px solid var(--drop-bg);
 }
 
-div.results > .equation:last-of-type > .operation {
+div.results > .equation:last-of-type > .operation-result {
   font-size: 0.7em !important;
 }
 

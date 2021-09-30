@@ -18,7 +18,7 @@ div.results {
   background-color: var(--results-bg);
 }
 
-input.operation {
+div.operation {
   grid-row: 3 / 4;
   width: 100%;
   background-color: var(--operation-bg);
@@ -31,13 +31,8 @@ main.keyboard {
   border-top: 1px solid var(--dark);
 }
 
-input.operation {
-  font-size: 1.5em;
-  border-radius: 0;
-}
-
 header.header,
-input.operation,
+div.operation,
 main.keyboard {
   padding: var(--sm-em) var(--md-em);
 }

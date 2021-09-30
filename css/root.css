@@ -43,6 +43,7 @@ button {
   transition: var(--bg-color-transition);
 }
 
+div.operation,
 input,
 button {
   font-size: 0.9em;
@@ -52,6 +53,7 @@ button {
   border-radius: var(--border-r-sm);
 }
 
+div.operation,
 input:focus,
 button:focus {
   outline: none;
