@@ -1,0 +1,9 @@
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background-color);
+}

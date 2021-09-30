@@ -1,0 +1,42 @@
+main.phone-container {
+  display: grid;
+  grid-template-rows: auto 80px repeat(3, auto) 1fr;
+  background-color: var(--container-bg);
+  grid-template-areas:
+    "header"
+    "result-container"
+    "equation-input"
+    "messages"
+    "tools"
+    "keyboard";
+  border-radius: 16px;
+  border: 3px solid var(--dark);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  width: 100%;
+  max-width: 290px;
+}
+
+header {
+  grid-area: header;
+}
+
+.result-container {
+  grid-area: result-container;
+}
+
+.equation-input {
+  grid-area: equation-input;
+}
+
+.messages {
+  grid-area: messages;
+}
+
+.tools {
+  grid-area: tools;
+}
+
+.keyboard {
+  grid-area: keyboard;
+}

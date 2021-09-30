@@ -4,82 +4,34 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Basic Mode</title>
+    <title>Calculator</title>
     <link rel="stylesheet" href="./css/root.css" />
-    <link rel="stylesheet" href="./css/layout.css" />
-    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/body.css" />
+    <link rel="stylesheet" href="./css/phone-container.css" />
+    <link rel="stylesheet" href="./css/timer.css" />
+    <link rel="stylesheet" href="./css/result-container.css" />
+    <link rel="stylesheet" href="./css/equation-input.css" />
+    <link rel="stylesheet" href="./css/messages.css" />
+    <link rel="stylesheet" href="./css/tools.css" />
     <link rel="stylesheet" href="./css/keyboard.css" />
-    <link rel="stylesheet" href="./css/results.css" />
-    <link rel="stylesheet" href="./css/operation.css" />
-    <link rel="stylesheet" href="./css/scroll.css" />
-    <link rel="stylesheet" href="./css/basic-keyboard.css" />
-    <link rel="stylesheet" href="./css/advanced-keyboard.css" />
-    <link rel="stylesheet" href="./css/financial-keyboard.css" />
-    <link rel="stylesheet" href="./css/programming-keyboard.css" />
   </head>
   <body>
-    <div class="basic container">
-      <header role="banner" class="header">
-        <button class="clear">Clear</button>
-        <div class="dropdown-select">
-          <button
-            class="drop-btn"
-            id="drop-btn"
-            active="false"
-            value="basic"
-            aria-label="selected mode"
-          ></button>
-          <ul class="options drop-items" id="drop-items" role="list">
-            <li class="option" role="listitem" value="basic" selected="false">
-              Basic Mode
-            </li>
-            <li
-              class="option"
-              role="listitem"
-              value="advanced"
-              selected="false"
-            >
-              Advanced Mode
-            </li>
-            <li
-              class="option"
-              role="listitem"
-              value="financial"
-              selected="false"
-            >
-              Financial Mode
-            </li>
-            <li
-              class="option"
-              role="listitem"
-              value="programming"
-              selected="false"
-            >
-              Programming Mode
-            </li>
-          </ul>
-        </div>
-      </header>
-      <div class="results"></div>
-      <div
-        type="text"
-        name="operation"
-        id="operation"
-        contenteditable="true"
-        class="operation"
-      ></div>
-      <main class="keyboard"></main>
-    </div>
-    <script src="./js/drop-down.js"></script>
-    <script src="./js/start.js"></script>
-    <script src="./js/keyboard.js"></script>
-    <script src="./js/results.js"></script>
-    <script src="./js/operation.js"></script>
-    <script src="./js/handle-keys.js"></script>
-    <script src="./js/execcommand.js"></script>
-    <script src="./js/build-basic-keyboard.js"></script>
-    <script src="./js/build-advanced-keyboard.js"></script>
-    <script src="./js/build-financial-keyboard.js"></script>
-    <script src="./js/build-programming-keyboard.js"></script>
+    <main class="phone-container">
+      <header role="banner" class="timer"></header>
+      <div class="result-container">
+        <span class="equal">=</span>
+        <span class="result">4000</span>
+      </div>
+      <input type="text" class="equation-input" />
+      <div class="messages">unknown expression</div>
+      <div class="tools">
+        <button>History</button>
+        <button>menu</button>
+        <button>delete</button>
+      </div>
+      <footer class="keyboard">keyboard</footer>
+    </main>
+    <script src="./js/timer.js"></script>
+    <script src="./js/equation-input.js"></script>
   </body>
 </html>
