@@ -1,31 +1,51 @@
 .keyboard {
   display: grid;
-  gap: 0.15rem;
-  padding-top: 0.5rem;
+  gap: 0.5rem;
+  padding: 0.5rem;
   align-self: stretch;
   justify-content: center;
   grid-template-columns: repeat(5, 46px);
   grid-template-rows: repeat(5, 46px);
   grid-template-areas:
-    "clear-display positive-negative angles-bracket percentage division"
-    "left-keyboard left-keyboard left-keyboard left-keyboard multiply"
-    "left-keyboard left-keyboard left-keyboard left-keyboard add"
-    "left-keyboard left-keyboard left-keyboard left-keyboard subtract"
-    "left-keyboard left-keyboard left-keyboard left-keyboard equal";
+    "clear-display positive-negative left-angle-bracket right-angle-bracket percentage"
+    "left-keyboard left-keyboard left-keyboard subtract subtract"
+    "left-keyboard left-keyboard left-keyboard division add"
+    "left-keyboard left-keyboard left-keyboard multiply add"
+    "left-keyboard left-keyboard left-keyboard equal equal";
   background-color: var(--keyboard);
 }
 
-/* ==== basic keys*/
+.key {
+  border: none;
+  cursor: pointer;
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: var(--bg-color-transition);
+  background-color: #484848;
+}
+
+.key:hover {
+  background-color: transparent;
+}
+
+/* basic keys*/
 .clear-display {
   grid-area: clear-display;
+  background-color: #b22222;
 }
 
 .positive-negative {
   grid-area: positive-negative;
 }
 
-.angles-bracket {
-  grid-area: angles-bracket;
+.left-angle-bracket {
+  grid-area: left-angle-bracket;
+}
+
+.right-angle-bracket {
+  grid-area: right-angle-bracket;
 }
 
 .percentage {
@@ -36,7 +56,108 @@
   grid-area: division;
 }
 
+.multiply {
+  grid-area: multiply;
+}
+
+.subtract {
+  grid-area: subtract;
+}
+
+.add {
+  grid-area: add;
+}
+
+.equal {
+  grid-area: equal;
+  background-color: #4169e1;
+}
+
+.division,
+.multiply,
+.subtract,
+.add {
+  background-color: #4169e199;
+}
+
+.percentage,
+.positive-negative,
+.left-angle-bracket,
+.right-angle-bracket {
+  background-color: #4169e133;
+}
+
+/* .left-keyboard */
 .left-keyboard {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(3, 46px);
+  grid-template-rows: repeat(4, 46px);
   grid-area: left-keyboard;
-  background-color: indigo;
+}
+
+.left-keyboard > .key {
+  animation: show-keys 0.2s ease-in-out;
+}
+
+@keyframes show-keys {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* > .default-keyboard */
+.default-keyboard {
+  grid-template-areas:
+    "number-7 number-8 number-9"
+    "number-4 number-5 number-6"
+    "number-1 number-2 number-3"
+    "number-0 number-0 dot";
+}
+
+.number-9 {
+  grid-area: number-9;
+}
+
+.number-8 {
+  grid-area: number-8;
+}
+
+.number-7 {
+  grid-area: number-7;
+}
+
+.number-6 {
+  grid-area: number-6;
+}
+
+.number-5 {
+  grid-area: number-5;
+}
+
+.number-4 {
+  grid-area: number-4;
+}
+
+.number-3 {
+  grid-area: number-3;
+}
+
+.number-2 {
+  grid-area: number-2;
+}
+
+.number-1 {
+  grid-area: number-1;
+}
+
+.number-0 {
+  grid-area: number-0;
+}
+
+.dot {
+  grid-area: dot;
 }

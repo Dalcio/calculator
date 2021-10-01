@@ -46,7 +46,8 @@ function staticKeys() {
   );
 
   /* ==== brackets ==== */
-  const angles_bracket = createElementKey("( )", "angles-bracket");
+  const left_angle_bracket = createElementKey("(", "left-angle-bracket");
+  const right_angle_bracket = createElementKey(")", "right-angle-bracket");
   /* end brackets */
 
   // ==== percentage ====
@@ -54,7 +55,7 @@ function staticKeys() {
 
   /* ==== operators ==== */
   const division = createElementKey("/", "division");
-  const multiply = createElementKey("*", "multiply");
+  const multiply = createElementKey("&times;", "multiply");
   const add = createElementKey("+", "add");
   const subtract = createElementKey("-", "subtract");
   /* end  */
@@ -74,7 +75,8 @@ function staticKeys() {
   // positive negative
   keyboard.appendChild(positive_negative);
   // brackets
-  keyboard.appendChild(angles_bracket);
+  keyboard.appendChild(left_angle_bracket);
+  keyboard.appendChild(right_angle_bracket);
   // percentage
   keyboard.appendChild(percentage);
   // operators
@@ -100,13 +102,21 @@ function defaultKeyboard() {
   });
   /* end  */
 
-  /* ==== others ==== */
-  const undo = createElementKey("&cularr;", "undo", () => {});
+  // ==== dot ====
   const dot = createElementKey(".", "dot");
-  /* end  */
 
   // appending numbers
+  const keyboard = document.createElement("div");
+  keyboard.classList.add("left-keyboard");
+  keyboard.classList.add("default-keyboard");
+
+  // numbers
   numbers.forEach((number) => {
     keyboard.appendChild(number);
   });
+
+  // dot
+  keyboard.appendChild(dot);
+
+  return keyboard;
 }
