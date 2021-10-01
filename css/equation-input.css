@@ -1,3 +1,10 @@
+.equation-wrapper {
+  align-self: center;
+  position: relative;
+  width: calc(100% - 1rem);
+  height: 42px;
+}
+
 .equation-input {
   border: none;
   border-radius: var(--border-r-sm);
@@ -6,8 +13,8 @@
   font-size: 1.4em;
   color: var(--text);
   background-color: transparent;
-  width: calc(100% - 1rem);
-  align-self: center;
+  position: absolute;
+  width: 100%;
 }
 
 .equation-input:focus {
