@@ -1,8 +1,42 @@
 .keyboard {
   display: grid;
-  gap: 0.5rem;
-  padding: 0.5rem;
-  grid-template-columns: repeat(4, 46px);
+  gap: 0.15rem;
+  padding-top: 0.5rem;
+  align-self: stretch;
+  justify-content: center;
+  grid-template-columns: repeat(5, 46px);
   grid-template-rows: repeat(5, 46px);
+  grid-template-areas:
+    "clear-display positive-negative angles-bracket percentage division"
+    "left-keyboard left-keyboard left-keyboard left-keyboard multiply"
+    "left-keyboard left-keyboard left-keyboard left-keyboard add"
+    "left-keyboard left-keyboard left-keyboard left-keyboard subtract"
+    "left-keyboard left-keyboard left-keyboard left-keyboard equal";
   background-color: var(--keyboard);
+}
+
+/* ==== basic keys*/
+.clear-display {
+  grid-area: clear-display;
+}
+
+.positive-negative {
+  grid-area: positive-negative;
+}
+
+.angles-bracket {
+  grid-area: angles-bracket;
+}
+
+.percentage {
+  grid-area: percentage;
+}
+
+.division {
+  grid-area: division;
+}
+
+.left-keyboard {
+  grid-area: left-keyboard;
+  background-color: indigo;
 }

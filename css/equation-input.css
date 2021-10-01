@@ -1,11 +1,13 @@
 .equation-input {
   border: none;
   border-radius: var(--border-r-sm);
-  margin: 0.5rem;
+  padding: 0.5rem 0;
   text-align: right;
   font-size: 1.4em;
   color: var(--text);
   background-color: transparent;
+  width: calc(100% - 1rem);
+  align-self: center;
 }
 
 .equation-input:focus {
