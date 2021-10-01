@@ -40,7 +40,7 @@ function staticKeys() {
 
   // ==== positive negative ====
   const positive_negative = createElementKey(
-    "+/-",
+    "&PlusMinus;",
     "positive-negative",
     positiveNegative
   );
