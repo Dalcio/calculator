@@ -1,23 +1,19 @@
 /**
  * Creates an instance of the element for the specified tag.
  * @param {*} content - The content is a string or an object containing an innerHTML content te of an element.
- * @param {*} classes - The class or classes of an element. String or array of string
+ * @param {*} _class - The class of an element. String or array of string
  * @param {*} listener - Sets the callback that will be invoked when the button will be clicked.
  * @returns the element
  */
-function createElementKey(content, classes, listener) {
+function createElementKey(content, _class, listener) {
   const element = document.createElement("button");
 
   element.innerHTML = content;
 
   element.classList.add("key");
 
-  if (Array.isArray(classes)) {
-    classes.map((_class) => {
-      element.classList.add(_class);
-    });
-  } else if (typeof classes === "string") {
-    element.classList.add(classes);
+  if (typeof _class === "string") {
+    element.classList.add(_class);
   } else {
     throw new Error("it is not a valid class");
   }
@@ -25,7 +21,7 @@ function createElementKey(content, classes, listener) {
   if (listener) {
     element.addEventListener("click", listener);
   } else {
-    element.addEventListener("click", handleBasicKeys);
+    element.addEventListener("click", () => handleKeys(_class));
   }
 
   return element;
