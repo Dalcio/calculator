@@ -32,4 +32,5 @@ function renderThirdKeyboard() {
   const left_keyboard = document.querySelector(".left-keyboard");
   const third_keyboard = thirdKeyboard();
   left_keyboard.replaceWith(third_keyboard);
+  changeRadDegBtnContent();
 }

@@ -39,6 +39,7 @@ function setValueToCurrentCaretPos(value_to_insert) {
  * @param {*} key the key to be inserted
  */
 function handleKeys(key) {
+  // const keys_map = document.getElementById("keys-map");
   setValueToCurrentCaretPos(2);
 }
 
@@ -68,7 +69,6 @@ function radDeg() {
     const previous = localStorage.getItem("rad-deg");
 
     rad_deg = (previous && previous) || "deg";
-    changeRadDegBtnContent();
   });
 })();
 
@@ -77,8 +77,9 @@ function radDeg() {
  */
 function changeRadDegBtnContent() {
   const rad_deg_btn = document.querySelector(".rad-deg");
-
-  rad_deg_btn.textContent = (rad_deg === "rad" && "deg") || "rad";
+  if (rad_deg_btn !== null) {
+    rad_deg_btn.textContent = (rad_deg === "rad" && "deg") || "rad";
+  }
 }
 
 /**
