@@ -37,8 +37,7 @@ function staticKeys() {
   // ==== positive negative ====
   const positive_negative = createElementKey(
     "&PlusMinus;",
-    "positive-negative",
-    positiveNegative
+    "positive-negative"
   );
 
   /* ==== brackets ==== */
@@ -122,42 +121,34 @@ function defaultKeyboard() {
  */
 function secondKeyboard() {
   // ==== rad deg ====
-  const rad_deg = createElementKey("Rad", "rad-deg", () => {});
+  const rad_deg = createElementKey("Rad", "rad-deg", radDeg);
 
   // ==== square root ====
-  const square_root = createElementKey("&Sqrt;", "square-root", () => {});
+  const square_root = createElementKey("&Sqrt;", "square-root");
 
   /* ==== trigonometry ==== */
-  const sine = createElementKey("sin", "sine", () => {});
-  const cosine = createElementKey("cos", "cosine", () => {});
-  const tangent = createElementKey("tan", "tangent", () => {});
+  const sine = createElementKey("sin", "sine");
+  const cosine = createElementKey("cos", "cosine");
+  const tangent = createElementKey("tan", "tangent");
   /* trigonometry */
 
   /* ==== logarithms ==== */
-  const logarithm = createElementKey("log", "logarithm", () => {});
-  const natural_logarithm = createElementKey(
-    "ln",
-    "natural-logarithm",
-    () => {}
-  );
+  const logarithm = createElementKey("log", "logarithm");
+  const natural_logarithm = createElementKey("ln", "natural-logarithm");
   /* end logarithms */
 
   /* ==== exponent ==== */
-  const euler_power = createElementKey(
-    "&escr;<sup>y</sup>",
-    "euler-power",
-    () => {}
-  );
-  const square = createElementKey("x<sup>2</sup>", "square", () => {});
-  const exponent = createElementKey("x<sup>y</sup>", "exponent", () => {});
+  const euler_power = createElementKey("&escr;<sup>y</sup>", "euler-power");
+  const square = createElementKey("x<sup>2</sup>", "square");
+  const exponent = createElementKey("x<sup>y</sup>", "exponent");
   /* end exponent */
 
   // ==== absolute value ====
-  const absolute_value = createElementKey("|x|", "absolute-value", () => {});
+  const absolute_value = createElementKey("|x|", "absolute-value");
 
   /* ==== constants ==== */
-  const pi = createElementKey("&pi;", "pi", () => {});
-  const euler = createElementKey("&escr;", "euler", () => {});
+  const pi = createElementKey("&pi;", "pi");
+  const euler = createElementKey("&escr;", "euler");
   /* end constants */
 
   // appending numbers
@@ -200,63 +191,39 @@ function secondKeyboard() {
  */
 function thirdKeyboard() {
   // ==== rad deg ====
-  const rad_deg = createElementKey("Rad", "rad-deg", () => {});
+  const rad_deg = createElementKey("Rad", "rad-deg", radDeg);
 
   // ==== rad deg ====
-  const cubic_root = createElementKey(
-    "<sup>3</sup>&Sqrt;x",
-    "cubic-root",
-    () => {}
-  );
+  const cubic_root = createElementKey("<sup>3</sup>&Sqrt;x", "cubic-root");
 
   /* ==== trigonometry ==== */
-  const inverse_sine = createElementKey(
-    "sin<sup>-1</sup>",
-    "inverse-sine",
-    () => {}
-  );
-  const inverse_cosine = createElementKey(
-    "cos<sup>-1</sup>",
-    "inverse-cosine",
-    () => {}
-  );
+  const inverse_sine = createElementKey("sin<sup>-1</sup>", "inverse-sine");
+  const inverse_cosine = createElementKey("cos<sup>-1</sup>", "inverse-cosine");
   const inverse_tangent = createElementKey(
     "tan<sup>-1</sup>",
-    "inverse-tangent",
-    () => {}
+    "inverse-tangent"
   );
   // hyperbolic
-  const hyperbolic_sine = createElementKey("sinh", "hyperbolic-sine", () => {});
-  const hyperbolic_cosine = createElementKey(
-    "cosh",
-    "hyperbolic-cosine",
-    () => {}
-  );
-  const hyperbolic_tangent = createElementKey(
-    "tanh",
-    "hyperbolic-tangent",
-    () => {}
-  );
+  const hyperbolic_sine = createElementKey("sinh", "hyperbolic-sine");
+  const hyperbolic_cosine = createElementKey("cosh", "hyperbolic-cosine");
+  const hyperbolic_tangent = createElementKey("tanh", "hyperbolic-tangent");
   // inverse hyperbolic
   const inverse_hyperbolic_sine = createElementKey(
     "sinh<sup>-1</sup>",
-    "inverse-hyperbolic-sine",
-    () => {}
+    "inverse-hyperbolic-sine"
   );
   const inverse_hyperbolic_cosine = createElementKey(
     "cosh<sup>-1</sup>",
-    "inverse-hyperbolic-cosine",
-    () => {}
+    "inverse-hyperbolic-cosine"
   );
   const inverse_hyperbolic_tangent = createElementKey(
     "tanh<sup>-1</sup>",
-    "inverse-hyperbolic-tangent",
-    () => {}
+    "inverse-hyperbolic-tangent"
   );
   /* trigonometry */
 
   // ==== factorial ====
-  const factorial = createElementKey("x!", "factorial", () => {});
+  const factorial = createElementKey("x!", "factorial");
 
   // appending numbers
   const keyboard = document.createElement("div");
