@@ -1,9 +1,10 @@
 /* ==== Global Variables ==== */
+let rad_deg = "deg";
 /* End Global Variables */
 
 /**
  * Set the caret to an specific position on equation input
- * @param {*} caret_pos 
+ * @param {*} caret_pos
  */
 function setCaretPosition(caret_pos) {
   const equation_input = document.querySelector(".equation-input");
@@ -37,16 +38,48 @@ function setValueToCurrentCaretPos(value_to_insert) {
  * handle the basic keys
  * @param {*} key the key to be inserted
  */
-function handleBasicKeys(key) {
+function handleKeys(key) {
   setValueToCurrentCaretPos(2);
 }
 
+/**
+ * clear the display input / equation input
+ */
 function clearDisplay() {
   const equation_input = document.querySelector(".equation-input");
   equation_input.value = "";
 }
 
-function positiveNegative() {}
+/**
+ * handle the rad to degree and vice verse
+ */
+function radDeg() {
+  rad_deg = (rad_deg === "rad" && "deg") || "rad";
+
+  localStorage.setItem("rad-deg", rad_deg);
+  changeRadDegBtnContent();
+}
+
+/**
+ * load the previous rad_deg value from local storage on startup
+ */
+(function loadPreviousRadDeg() {
+  document.addEventListener("DOMContentLoaded", () => {
+    const previous = localStorage.getItem("rad-deg");
+
+    rad_deg = (previous && previous) || "deg";
+    changeRadDegBtnContent();
+  });
+})();
+
+/**
+ * change the rad deg button content to rad or deg
+ */
+function changeRadDegBtnContent() {
+  const rad_deg_btn = document.querySelector(".rad-deg");
+
+  rad_deg_btn.textContent = (rad_deg === "rad" && "deg") || "rad";
+}
 
 /**
  * resolves the equation when equal button was clicked

@@ -228,6 +228,11 @@
     "inverse-hyperbolic-sine inverse-hyperbolic-cosine inverse-hyperbolic-tangent";
 }
 
+.rad-deg {
+  grid-area: rad-deg;
+  text-transform: capitalize;
+}
+
 .cubic-root {
   grid-area: cubic-root;
 }
