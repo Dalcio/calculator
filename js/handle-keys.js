@@ -31,16 +31,25 @@ function setValueToCurrentCaretPos(value_to_insert) {
   equation_input.value =
     value.slice(0, caret_pos) + value_to_insert + value.slice(caret_pos);
 
-  setCaretPosition(caret_pos + 1);
+  setCaretPosition(caret_pos + value_to_insert.length);
 }
+
+/**
+ * removes the value at caret position with backspace. Verify if the value to be deleted is for example: sin( or log( and remove the entire string
+ */
+function removeAtCaretPos() {}
 
 /**
  * handle the basic keys
  * @param {*} key the key to be inserted
  */
-function handleKeys(key) {
-  // const keys_map = document.getElementById("keys-map");
-  setValueToCurrentCaretPos(2);
+function handleKeys(key_class) {
+  if (key_class === "positive-negative") {
+    debugger;
+    // should verify if the number is positive or negative. if negative should make positive removing the signal (-number) = number
+  } else if (Object.keys(all_keys).includes(key_class)) {
+    setValueToCurrentCaretPos(all_keys[key_class]);
+  }
 }
 
 /**
