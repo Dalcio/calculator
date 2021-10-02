@@ -4,7 +4,7 @@
   padding: 0.5rem;
   align-self: stretch;
   justify-content: center;
-  grid-template-columns: repeat(5, 46px);
+  grid-template-columns: repeat(5, minmax(46px, auto));
   grid-template-rows: repeat(5, 46px);
   grid-template-areas:
     "clear-display positive-negative left-angle-bracket right-angle-bracket percentage"
@@ -91,7 +91,7 @@
 .left-keyboard {
   display: grid;
   gap: 0.5rem;
-  grid-template-columns: repeat(3, 46px);
+  grid-template-columns: repeat(3, minmax(46px, auto));
   grid-template-rows: repeat(4, 46px);
   grid-area: left-keyboard;
 }
@@ -160,4 +160,114 @@
 
 .dot {
   grid-area: dot;
+}
+
+/* > .second-keyboard */
+.second-keyboard {
+  grid-template-areas:
+    "square-root square exponent"
+    "sine cosine tangent"
+    "logarithm natural-logarithm euler-power"
+    "absolute-value pi euler";
+}
+
+.square-root {
+  grid-area: square-root;
+}
+
+.square {
+  grid-area: square;
+}
+
+.exponent {
+  grid-area: exponent;
+}
+
+.sine {
+  grid-area: sine;
+}
+
+.cosine {
+  grid-area: cosine;
+}
+
+.tangent {
+  grid-area: tangent;
+}
+
+.logarithm {
+  grid-area: logarithm;
+}
+
+.natural-logarithm {
+  grid-area: natural-logarithm;
+}
+
+.euler-power {
+  grid-area: euler-power;
+}
+
+.absolute-value {
+  grid-area: absolute-value;
+}
+
+.pi {
+  grid-area: pi;
+}
+
+.euler {
+  grid-area: euler;
+}
+
+/* > .third-keyboard */
+.third-keyboard {
+  grid-template-areas:
+    "rad-deg cubic-root factorial"
+    "inverse-sine inverse-cosine inverse-tangent"
+    "hyperbolic-sine hyperbolic-cosine hyperbolic-tangent"
+    "inverse-hyperbolic-sine inverse-hyperbolic-cosine inverse-hyperbolic-tangent";
+}
+
+.cubic-root {
+  grid-area: cubic-root;
+}
+
+.factorial {
+  grid-area: factorial;
+}
+
+.inverse-sine {
+  grid-area: inverse-sine;
+}
+
+.inverse-cosine {
+  grid-area: inverse-cosine;
+}
+
+.inverse-tangent {
+  grid-area: inverse-tangent;
+}
+
+.hyperbolic-sine {
+  grid-area: hyperbolic-sine;
+}
+
+.hyperbolic-cosine {
+  grid-area: hyperbolic-cosine;
+}
+
+.hyperbolic-tangent {
+  grid-area: hyperbolic-tangent;
+}
+
+.inverse-hyperbolic-sine {
+  grid-area: inverse-hyperbolic-sine;
+}
+
+.inverse-hyperbolic-cosine {
+  grid-area: inverse-hyperbolic-cosine;
+}
+
+.inverse-hyperbolic-tangent {
+  grid-area: inverse-hyperbolic-tangent;
 }

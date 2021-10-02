@@ -29,18 +29,26 @@
       </div>
       <div class="messages">unknown expression</div>
       <div class="tools">
-        <button>History</button>
-        <button><i class="fas fa-exchange-alt"></i><span>1st</span></button>
-        <button>
+        <button id="history">History</button>
+        <button id="change-keyboard">
+          &ReverseEquilibrium;<span class="current-keyboard">1st</span>
+        </button>
+        <button id="backspace">
           <i class="fas fa-backspace"></i>
         </button>
       </div>
-      <footer class="keyboard"></footer>
+      <footer class="keyboard">
+        <ul class="history" show="false">
+          <li><span>expression</span><span>=</span> <span>4000</span></li>
+        </ul>
+      </footer>
     </main>
     <script src="./js/timer.js"></script>
     <script src="./js/equation-input.js"></script>
     <script src="./js/handle-keys.js"></script>
     <script src="./js/keyboard.js"></script>
     <script src="./js/build-keyboard.js"></script>
+    <script src="./js/history.js"></script>
+    <script src="./js/change-keyboard.js"></script>
   </body>
 </html>
