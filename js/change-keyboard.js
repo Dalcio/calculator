@@ -9,7 +9,7 @@ let current_keyboard = 0;
   document.addEventListener("DOMContentLoaded", () => {
     const saved_keyboard = localStorage.getItem("current-keyboard");
 
-    current_keyboard = (saved_keyboard && saved_keyboard) || 0;
+    current_keyboard = (saved_keyboard && Number(saved_keyboard)) || 0;
     renderPretendedKeyboard(current_keyboard);
   });
 })();
