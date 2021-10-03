@@ -21,7 +21,7 @@ function setCaretPosition(caret_pos) {
 
 /**
  * insert a value to caret current position on input text
- * @param {*} value_to_insert the value to be inserted
+ * @param {string | number} value_to_insert the value to be inserted
  */
 function setValueToCurrentCaretPos(value_to_insert) {
   const equation_input = document.querySelector(".equation-input");
@@ -31,7 +31,7 @@ function setValueToCurrentCaretPos(value_to_insert) {
   equation_input.value =
     value.slice(0, caret_pos) + value_to_insert + value.slice(caret_pos);
 
-  setCaretPosition(caret_pos + value_to_insert.length);
+  setCaretPosition(caret_pos + value_to_insert.toString().length);
 }
 
 /**
