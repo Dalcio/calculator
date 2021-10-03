@@ -35,7 +35,8 @@ function resolveTheEquation() {
      * @param {string} str
      */
     const replaceAbs = (str) => {
-      const pattern = /\|(\w*|(\([\w|\)|\(|\-|\*|\/|\+|\d]*\)))\|/g;
+      const pattern =
+        /\|([\w|\)|\(|\-|\*|\/|\+|\d]*|(\([\w|\)|\(|\-|\*|\/|\+|\d]*\)))\|/g;
       const matches = str.match(pattern);
 
       if (matches && matches.length > 0) {
