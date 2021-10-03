@@ -98,11 +98,78 @@ function resolveTheEquation() {
     formatted_expression = formatted_expression.replace("π", Math.PI);
 
     // ==== sine functions ====
-    const { sin, asin, sinh, asinh } = Math;
+    const sin = (angle) => {
+      const sine = Math.sin(angle);
+      if (rad_deg === "rad") return sine;
+      return (sine * 180) / Math.PI;
+    };
+
+    const asin = (angle) => {
+      const arc_sine = Math.asin(angle);
+      if (rad_deg === "rad") return arc_sine;
+      return (arc_sine * 180) / Math.PI;
+    };
+
+    const sinh = (angle) => {
+      const sine_hyp = Math.sinh(angle);
+      if (rad_deg === "rad") return sine_hyp;
+      return (sine_hyp * 180) / Math.PI;
+    };
+
+    const asinh = (angle) => {
+      const arc_sine_hyp = Math.asinh(angle);
+      if (rad_deg === "rad") return arc_sine_hyp;
+      return (arc_sine_hyp * 180) / Math.PI;
+    };
     // ==== cosine functions ====
-    const { cos, acos, cosh, acosh } = Math;
+    const cos = (angle) => {
+      const cos = Math.cos(angle);
+      if (rad_deg === "rad") return cos;
+      return (cos * 180) / Math.PI;
+    };
+
+    const acos = (angle) => {
+      const arc_cos = Math.acos(angle);
+      if (rad_deg === "rad") return arc_cos;
+      return (arc_cos * 180) / Math.PI;
+    };
+
+    const cosh = (angle) => {
+      const cos_hyp = Math.cosh(angle);
+      if (rad_deg === "rad") return cos_hyp;
+      return (cos_hyp * 180) / Math.PI;
+    };
+
+    const acosh = (angle) => {
+      const arc_cos_hyp = Math.acosh(angle);
+      if (rad_deg === "rad") return arc_cos_hyp;
+      return (arc_cos_hyp * 180) / Math.PI;
+    };
     // ==== tangent functions ====
-    const { tan, atan, tanh, atanh } = Math;
+    const tan = (angle) => {
+      const tangent = Math.tan(angle);
+      if (rad_deg === "rad") return tangent;
+      return (tangent * 180) / Math.PI;
+    };
+
+    const atan = (angle) => {
+      const arc_tangent = Math.atan(angle);
+      if (rad_deg === "rad") return arc_tangent;
+      return (arc_tangent * 180) / Math.PI;
+    };
+
+    const tanh = (angle) => {
+      const tangent_hyp = Math.tanh(angle);
+      if (rad_deg === "rad") return tangent_hyp;
+      return (tangent_hyp * 180) / Math.PI;
+    };
+
+    const atanh = (angle) => {
+      const arc_tangent_hyp = Math.atanh(angle);
+      if (rad_deg === "rad") return arc_tangent_hyp;
+      return (arc_tangent_hyp * 180) / Math.PI;
+    };
+
     // ==== logarithms functions ====
     const log = Math.log10;
     const ln = Math.log;
