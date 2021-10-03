@@ -37,7 +37,63 @@ function setValueToCurrentCaretPos(value_to_insert) {
 /**
  * removes the value at caret position with backspace. Verify if the value to be deleted is for example: sin( or log( and remove the entire string
  */
-function removeAtCaretPos() {}
+function backspaceAtCaretPos() {
+  const equation_input = document.querySelector(".equation-input");
+  const caret_pos = equation_input.selectionStart;
+  const slice_left = equation_input.value.slice(0, caret_pos);
+  const slice_right = equation_input.value.slice(caret_pos);
+  const pattern = /(a{0,1}(sin|cos|tan)h{0,1}|log|ln|ℯ\^|cbrt)\($/g;
+
+  if (slice_left.match(pattern)) {
+    const new_slice_left = slice_left.replace(pattern, "");
+    equation_input.value = new_slice_left + slice_right;
+
+    setCaretPosition(caret_pos - (slice_left.length - new_slice_left.length));
+  } else {
+    equation_input.value = slice_left.slice(0, caret_pos - 1) + slice_right;
+    setCaretPosition(caret_pos - 1);
+  }
+}
+
+/**
+ * when delete was clicked
+ */
+function deleteAtCaretPos() {
+  const equation_input = document.querySelector(".equation-input");
+  const caret_pos = equation_input.selectionStart;
+  const slice_left = equation_input.value.slice(0, caret_pos);
+  const slice_right = equation_input.value.slice(caret_pos);
+  const pattern = /^(a{0,1}(sin|cos|tan)h{0,1}|log|ln|ℯ\^|cbrt)\(/g;
+
+  if (slice_right.match(pattern)) {
+    const new_slice_right = slice_right.replace(pattern, "");
+    equation_input.value = slice_left + new_slice_right;
+    // debugger;
+    setCaretPosition(caret_pos);
+  } else {
+    equation_input.value = slice_left + slice_right.slice(caret_pos - 1);
+    setCaretPosition(caret_pos);
+  }
+}
+
+/**
+ * delete when backspace and delete btn will be clicked
+ */
+(function pressedBackSpace() {
+  const backspace = document.getElementById("backspace");
+  const equation_input = document.querySelector(".equation-input");
+
+  backspace.addEventListener("click", backspaceAtCaretPos);
+  equation_input.addEventListener("keydown", (event) => {
+    if (event.which === 8) {
+      event.preventDefault();
+      backspaceAtCaretPos();
+    } else if (event.which === 46) {
+      event.preventDefault();
+      deleteAtCaretPos();
+    }
+  });
+})();
 
 /**
  * handle the basic keys
