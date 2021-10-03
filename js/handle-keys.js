@@ -113,7 +113,9 @@ function handleKeys(key_class) {
  */
 function clearDisplay() {
   const equation_input = document.querySelector(".equation-input");
+  const result_html = document.querySelector(".result-container > .result");
   equation_input.value = "";
+  result_html.textContent = 0;
 }
 
 /**

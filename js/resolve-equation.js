@@ -6,7 +6,6 @@ function resolveTheEquation() {
     const expression = document.querySelector(".equation-input").value;
 
     if (!expression) return;
-    const result_html = document.querySelector(".result-container > .result");
 
     let formatted_expression = expression.replace("^", "**");
 
@@ -192,6 +191,7 @@ function resolveTheEquation() {
     };
 
     const result = eval(formatted_expression);
+    const result_html = document.querySelector(".result-container > .result");
     result_html.textContent = result;
     storeHistoryItem({ expression, result });
   } catch (error) {
