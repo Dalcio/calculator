@@ -49,7 +49,7 @@ function resolveTheEquation() {
       }
       return str;
     };
-    debugger;
+
     // remove not allowed char on type chars
     formatted_expression = replaceAbs(formatted_expression);
 
@@ -191,8 +191,27 @@ function resolveTheEquation() {
       return factorial(Number(n));
     };
 
-    const result = eval(formatted_expression);
+    /**
+     * @type {number | string} result
+     */
+    let result = eval(formatted_expression);
     const result_html = document.querySelector(".result-container > .result");
+
+    if (Number.isFinite(result)) {
+      if (result.toString().match(/e/)) {
+        result = result.toExponential();
+      } else if (result.toString().includes(".")) {
+        result = result.toFixed(
+          Math.min(
+            result.toString().split(".")[1].length,
+            (result.toString().split(".")[0].length <= 4 && 4) || 0
+          )
+        );
+      } else {
+        result = result.toFixed();
+      }
+    }
+
     result_html.textContent = result;
     storeHistoryItem({ expression, result });
   } catch (error) {
