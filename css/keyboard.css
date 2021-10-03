@@ -273,3 +273,29 @@
 .inverse-hyperbolic-tangent {
   grid-area: inverse-hyperbolic-tangent;
 }
+
+@media (max-width: 286px) {
+  .keyboard,
+  .left-keyboard {
+    gap: 0;
+    padding: 0;
+  }
+  .key {
+    border-radius: 0;
+    border: 1px solid var(--keyboard);
+  }
+}
+
+@media (max-height: 387px) {
+  .keyboard {
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 232px) {
+  .tools,
+  .keyboard {
+    overflow-y: auto;
+    overflow-x: auto;
+  }
+}
