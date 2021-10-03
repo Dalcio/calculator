@@ -6,7 +6,7 @@ main.phone-container {
   background-color: var(--container-bg);
 }
 
-@media (min-width: 288px) {
+@media (min-width: 288px) and (min-height: 435px) {
   main.phone-container {
     width: auto;
     height: auto;
