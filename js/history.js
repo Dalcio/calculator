@@ -115,6 +115,7 @@ function updateHistoryList() {
 
   clear_display.addEventListener("click", () => {
     history = [];
+    localStorage.removeItem("history")
     document.querySelector(".history-list").innerHTML = "";
     document.querySelector("button#history").click();
   });
