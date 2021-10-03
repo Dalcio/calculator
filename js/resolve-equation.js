@@ -73,6 +73,26 @@ function resolveTheEquation() {
 
     formatted_expression = replaceFact(formatted_expression);
 
+    /**
+     * replaces the 5% to percent(5)
+     * @param {string} str
+     */
+    const replacePercent = (str) => {
+      const pattern = /(\w*|(\([\w|\)|\(|\-|\*|\/|\+|\d]*\)))%/g;
+      const matches = str.match(pattern);
+
+      if (matches && matches.length > 0) {
+        matches.forEach((match) => {
+          const value = match.replace(/\){0,1}%$/g, "").replace(/\({0,1}/, "");
+          str = str.replace(match, `percent(${value})`);
+        });
+      }
+
+      return str;
+    };
+
+    formatted_expression = replacePercent(formatted_expression);
+
     // format constants
     formatted_expression = formatted_expression.replace("ℯ", Math.E);
     formatted_expression = formatted_expression.replace("π", Math.PI);
@@ -90,6 +110,10 @@ function resolveTheEquation() {
     const { sqrt, cbrt } = Math;
     // ==== absolute value  functions ====
     const { abs } = Math;
+
+    const percent = (n) => {
+      return Number(n) / 100;
+    };
 
     const fact = (n) => {
       function factorial(x) {
