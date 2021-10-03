@@ -47,10 +47,10 @@ function resolveTheEquation() {
           str = str.replace(match, `abs(${value})`);
         });
       }
-
       return str;
     };
-
+    debugger;
+    // remove not allowed char on type chars
     formatted_expression = replaceAbs(formatted_expression);
 
     /**

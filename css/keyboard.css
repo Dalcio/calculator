@@ -7,7 +7,7 @@
   grid-template-columns: repeat(5, minmax(46px, auto));
   grid-template-rows: repeat(5, 46px);
   grid-template-areas:
-    "clear-display positive-negative left-angle-bracket right-angle-bracket percentage"
+    "clear-display clear-display left-angle-bracket right-angle-bracket percentage"
     "left-keyboard left-keyboard left-keyboard subtract subtract"
     "left-keyboard left-keyboard left-keyboard division add"
     "left-keyboard left-keyboard left-keyboard multiply add"
@@ -34,10 +34,6 @@
 .clear-display {
   grid-area: clear-display;
   background-color: #b22222;
-}
-
-.positive-negative {
-  grid-area: positive-negative;
 }
 
 .left-angle-bracket {

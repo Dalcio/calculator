@@ -100,10 +100,7 @@ function deleteAtCaretPos() {
  * @param {*} key the key to be inserted
  */
 function handleKeys(key_class) {
-  if (key_class === "positive-negative") {
-    debugger;
-    // should verify if the number is positive or negative. if negative should make positive removing the signal (-number) = number
-  } else if (Object.keys(all_keys).includes(key_class)) {
+  if (Object.keys(all_keys).includes(key_class)) {
     setValueToCurrentCaretPos(all_keys[key_class]);
   }
 }

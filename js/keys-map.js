@@ -1,5 +1,4 @@
 const default_keys = {
-  "positive-negative": "-(",
   "left-angle-bracket": "(",
   "right-angle-bracket": ")",
 

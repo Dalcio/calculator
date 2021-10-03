@@ -34,12 +34,6 @@ function staticKeys() {
   // ==== clear display ====
   const clear_display = createElementKey("C", "clear-display", clearDisplay);
 
-  // ==== positive negative ====
-  const positive_negative = createElementKey(
-    "&PlusMinus;",
-    "positive-negative"
-  );
-
   /* ==== brackets ==== */
   const left_angle_bracket = createElementKey("(", "left-angle-bracket");
   const right_angle_bracket = createElementKey(")", "right-angle-bracket");
@@ -67,8 +61,6 @@ function staticKeys() {
 
   // clear display
   keyboard.appendChild(clear_display);
-  // positive negative
-  keyboard.appendChild(positive_negative);
   // brackets
   keyboard.appendChild(left_angle_bracket);
   keyboard.appendChild(right_angle_bracket);
