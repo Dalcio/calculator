@@ -10,9 +10,7 @@ let history = []; // [{expression, result}]
   document.addEventListener("DOMContentLoaded", () => {
     const stored_history = JSON.parse(localStorage.getItem("history"));
 
-    history = (stored_history && stored_history) || [
-      { expression: "1*2+asin(90)", result: 20 },
-    ];
+    history = (stored_history && stored_history) || [];
   });
 })();
 

@@ -1,6 +1,5 @@
-const all_keys = {
+const default_keys = {
   "positive-negative": "-(",
-
   "left-angle-bracket": "(",
   "right-angle-bracket": ")",
 
@@ -22,25 +21,41 @@ const all_keys = {
   "number-9": 9,
 
   dot: ".",
-  
+};
+
+const functions_keys = {
+  // done
   "square-root": "√(",
+
+  // done
   square: "^(2)",
   exponent: "^(",
 
+  // done
   sine: "sin(",
   cosine: "cos(",
   tangent: "tan(",
 
+  // done
   logarithm: "log(",
   "natural-logarithm": "ln(",
 
+  // done
   "euler-power": "ℯ^(",
+
   "absolute-value": "|",
-  pi: "π",
-  euler: "ℯ",
-  "cubic-root": "cbrt(",
+
+  // done
   factorial: "!",
 
+  // done
+  pi: "π",
+  euler: "ℯ",
+
+  // done
+  "cubic-root": "cbrt(",
+
+  // done
   "inverse-sine": "asin(",
   "inverse-cosine": "acos(",
   "inverse-tangent": "atan(",
@@ -52,4 +67,9 @@ const all_keys = {
   "inverse-hyperbolic-sine": "asinh(",
   "inverse-hyperbolic-cosine": "acosh(",
   "inverse-hyperbolic-tangent": "atanh(",
+};
+
+const all_keys = {
+  ...default_keys,
+  ...functions_keys,
 };
