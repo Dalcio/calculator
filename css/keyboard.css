@@ -83,7 +83,8 @@
 .percentage,
 .positive-negative,
 .left-angle-bracket,
-.right-angle-bracket {
+.right-angle-bracket,
+.rad-deg {
   background-color: #4169e133;
 }
 
