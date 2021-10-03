@@ -3,7 +3,13 @@
  */
 function resolveTheEquation() {
   try {
-    debugger
+    const expression = document.querySelector(".equation-input").value;
+
+    if (!expression) return;
+
+    const result = 0;
+    storeHistoryItem({ expression, result });
+    debugger;
     // solve the equation
   } catch (error) {
     const messages = document.querySelector(".messages");

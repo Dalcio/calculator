@@ -47,37 +47,53 @@
   width: calc(100% - 42px);
   background-color: var(--keyboard);
   border-bottom-left-radius: 6px;
-  overflow: auto;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1;
 }
 
-ul.history {
+button.clear-history {
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+button.clear-history:hover {
+  color: tomato;
+}
+
+ul.history-list {
   list-style: none;
   display: grid;
   padding: 0;
+  overflow: auto;
 }
 
-ul.history > li {
+ul.history-list > li {
   font-size: 1rem;
-  padding: 0.5rem;
+  padding: 0 0.5rem;
   display: grid;
   gap: 0.5rem;
   grid-template-columns: 1fr auto auto;
   align-items: center;
 }
 
-ul.history > li:not(:last-of-type) {
+ul.history-list > li:not(:last-of-type) {
   border-bottom: 1px solid rgba(241, 231, 223, 0.4);
 }
 
-ul.history > li > span:not(:nth-of-type(2)):hover {
+ul.history-list > li > span:not(:nth-of-type(2)):hover {
   opacity: 0.8;
 }
 
-ul.history > li > span:nth-of-type(2) {
+ul.history-list > li > span:nth-of-type(2) {
   color: rgba(241, 231, 223, 0.6);
 }
 
-ul.history > li > span:last-of-type {
+ul.history-list > li > span:last-of-type {
   font-size: 1.4rem;
   font-weight: bold;
 }
