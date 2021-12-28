@@ -18,13 +18,32 @@ function createElementKey(content, _class, listener) {
     throw new Error("it is not a valid class");
   }
 
+  const callback = (e) => {
+    removeErrorBox();
+    listener(e);
+  };
+
   if (listener) {
-    element.addEventListener("click", listener);
+    element.addEventListener("click", callback);
   } else {
-    element.addEventListener("click", () => handleKeys(_class));
+    element.addEventListener("click", () => {
+      removeErrorBox();
+      handleKeys(_class);
+    });
   }
 
   return element;
+}
+
+/**
+ * remove the error message
+ */
+function removeErrorBox() {
+  const messages = document.querySelector(".messages");
+  if (messages.style.display === "block") {
+    messages.textContent = "";
+    messages.style.display = "none";
+  }
 }
 
 /**
