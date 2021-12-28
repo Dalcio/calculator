@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="simple scientific calculator" />
     <title>Calculator</title>
     <link href="./assets/fonts/css/all.css" rel="stylesheet" />
     <!--load all styles -->
     <link rel="stylesheet" href="./css/root.css" />
     <link rel="stylesheet" href="./css/body.css" />
-    <link rel="stylesheet" href="./css/phone-container.css" />
+    <link rel="stylesheet" href="./css/calculator-container.css" />
     <link rel="stylesheet" href="./css/timer.css" />
     <link rel="stylesheet" href="./css/result-container.css" />
     <link rel="stylesheet" href="./css/equation-input.css" />
@@ -18,14 +19,19 @@
     <link rel="stylesheet" href="./css/keyboard.css" />
   </head>
   <body>
-    <main class="phone-container">
+    <main class="calculator-container">
       <header role="banner" class="timer"></header>
       <div class="result-container">
         <span class="equal-result">=</span>
         <span class="result">0</span>
       </div>
       <div class="equation-wrapper">
-        <input type="text" class="equation-input" />
+        <input
+          type="text"
+          class="equation-input"
+          aria-label="equation input"
+          readonly
+        />
       </div>
       <div class="messages"></div>
       <div class="tools">
@@ -33,7 +39,7 @@
         <button id="change-keyboard">
           &ReverseEquilibrium;<span class="current-keyboard">1st</span>
         </button>
-        <button id="backspace">
+        <button id="backspace" aria-label="backspace">
           <i class="fas fa-backspace"></i>
         </button>
       </div>

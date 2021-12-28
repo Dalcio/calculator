@@ -1,13 +1,12 @@
-main.phone-container {
+main.calculator-container {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 1fr;
   background-color: var(--container-bg);
 }
 
-@media (min-width: 288px) and (min-height: 435px) {
-  main.phone-container {
+@media (min-width: 576px) and (min-height: 1024px) {
+  main.calculator-container {
     width: auto;
     height: auto;
     border-radius: 6px;
@@ -17,8 +16,8 @@ main.phone-container {
   }
 }
 
-@media (max-height: 435px) {
-  main.phone-container {
+@media (max-height: 1024px) {
+  main.calculator-container {
     width: 100%;
     height: 100%;
   }
